@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e07fb6f7-5cad-448b-be25-9967d3233d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cheats">
+      <UniqueIdentifier>{5a80f538-888e-4b95-b921-14ab848a1d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX">
+      <UniqueIdentifier>{eda4883e-7181-45d7-adad-f40ad9252c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{c5a6d312-5c32-4873-bf16-2b2de9d7f439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{4838260a-afc4-4a39-ac0e-68b6d0b11f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{58744a24-8f15-414d-a751-9e581b3e4f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver">
+      <UniqueIdentifier>{dec4d69b-dfa1-4dbd-816c-4c0efe0449aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver\Utils">
+      <UniqueIdentifier>{20e0ad53-dc0d-42bf-8adf-a65d6433bb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver\Unity">
+      <UniqueIdentifier>{2094da85-a555-4fab-802a-8353ce75fc12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver\Unity\API">
+      <UniqueIdentifier>{68cc664e-21bf-4c01-af0d-e8c1cb4de392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver\Unity\Structures">
+      <UniqueIdentifier>{7f71dff2-9344-49b5-a325-488c738f118a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Il2Cpp-Resolver\Functions">
+      <UniqueIdentifier>{cd60f548-aa95-4cc7-9971-3dfd411c02d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\utils.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="cheats\Cheat.cpp">
+      <Filter>Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="cheats\CheatManager.cpp">
+      <Filter>Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="rendering\DirectX.cpp">
+      <Filter>DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_impl_dx11.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_impl_win32.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Cache.cpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Data.cpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Il2cpp.cpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Utils\Helper.cpp">
+      <Filter>Il2Cpp-Resolver\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\Obfuscators.cpp">
+      <Filter>Il2Cpp-Resolver\Unity</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\_TEMPLATE_API.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\Camera.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\Component.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\GameObject.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\LayerMask.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\Object.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\Rigidbody.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Unity\API\Transform.cpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Functions\Callback.cpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Functions\Class.cpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Functions\String.cpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\IL2CPP_Resolver\Functions\Thread.cpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="rendering\Gui.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\utils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="cheats\Cheat.h">
+      <Filter>Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="cheats\CheatManager.h">
+      <Filter>Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering\DirectX.h">
+      <Filter>DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imgui_impl_dx11.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imgui_impl_win32.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Cache.hpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Data.hpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Defines.hpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Il2cpp.h">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Includes.hpp">
+      <Filter>Il2Cpp-Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Utils\Helper.hpp">
+      <Filter>Il2Cpp-Resolver\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Utils\Joaat.hpp">
+      <Filter>Il2Cpp-Resolver\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Utils\VFunc.hpp">
+      <Filter>Il2Cpp-Resolver\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Defines.hpp">
+      <Filter>Il2Cpp-Resolver\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Includes.hpp">
+      <Filter>Il2Cpp-Resolver\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Obfuscators.hpp">
+      <Filter>Il2Cpp-Resolver\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\_TEMPLATE_API.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\Camera.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\Component.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\GameObject.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\LayerMask.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\Object.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\Rigidbody.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\API\Transform.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\API</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\Engine.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\il2cpp.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\il2cppArray.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\il2cppDictionary.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\Includes.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Unity\Structures\System_String.hpp">
+      <Filter>Il2Cpp-Resolver\Unity\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\Callback.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\Class.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\Domain.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\ResolveCall.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\String.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\IL2CPP_Resolver\Functions\Thread.hpp">
+      <Filter>Il2Cpp-Resolver\Functions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
