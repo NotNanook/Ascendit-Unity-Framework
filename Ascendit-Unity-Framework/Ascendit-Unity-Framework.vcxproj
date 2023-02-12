@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClCompile Include="cheats\Cheat.cpp" />
     <ClCompile Include="cheats\CheatManager.cpp" />
+    <ClCompile Include="cheats\cheats\ExampleCheat.cpp" />
     <ClCompile Include="dependencies\IL2CPP_Resolver\Cache.cpp" />
     <ClCompile Include="dependencies\IL2CPP_Resolver\Data.cpp" />
     <ClCompile Include="dependencies\IL2CPP_Resolver\Functions\Callback.cpp" />
@@ -194,6 +195,7 @@
   <ItemGroup>
     <ClInclude Include="cheats\Cheat.h" />
     <ClInclude Include="cheats\CheatManager.h" />
+    <ClInclude Include="cheats\cheats\ExampleCheat.h" />
     <ClInclude Include="dependencies\IL2CPP_Resolver\Cache.hpp" />
     <ClInclude Include="dependencies\IL2CPP_Resolver\Data.hpp" />
     <ClInclude Include="dependencies\IL2CPP_Resolver\Defines.hpp" />
@@ -233,8 +235,8 @@
     <ClInclude Include="dependencies\ImGui\imstb_rectpack.h" />
     <ClInclude Include="dependencies\ImGui\imstb_textedit.h" />
     <ClInclude Include="dependencies\ImGui\imstb_truetype.h" />
-    <ClInclude Include="Gui.h" />
     <ClInclude Include="rendering\DirectX.h" />
+    <ClInclude Include="rendering\Gui.h" />
     <ClInclude Include="utility\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

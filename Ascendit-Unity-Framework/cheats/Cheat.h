@@ -16,8 +16,14 @@ public:
 	void virtual init() {}
 	void virtual onEnable() {}
 	void virtual onDisable() {}
-	void virtual onUpdate() {}
 	void checkForKey();
 	void checkForToggle();
 	void addKey(int key);
+
+	/*
+		Gets called every frame. Use this if:
+		- Module has to change global game value every tick
+		- Module draws something
+	*/
+	void virtual onRenderUpdate() {}
 };

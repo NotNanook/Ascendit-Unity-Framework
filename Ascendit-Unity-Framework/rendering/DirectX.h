@@ -11,6 +11,7 @@
 class DirectX {
 
 public:
+	static bool isWindowFocused();
 	static bool getWindowInformation();
 	static void hookDirectX();
 
@@ -27,7 +28,6 @@ public:
 	inline static WNDCLASSEX WindowClass;
 	inline static HWND WindowHwnd;
 
-	inline static bool ShowMenu = false;
 	inline static bool ImGui_Initialised = false;
 
 	inline static DWORD ID;
@@ -50,7 +50,5 @@ private:
 	static bool InitWindow();
 	static bool DeleteWindow();
 };
-
-// Things that cant be static because idk
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);

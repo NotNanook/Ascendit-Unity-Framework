@@ -1,6 +1,13 @@
+#include "CheatManager.h"
 #include "DirectX.h"
 #include "Gui.h"
 #include <Psapi.h>
+
+bool DirectX::isWindowFocused() {
+	DWORD ForegroundWindowProcessID;
+	GetWindowThreadProcessId(GetForegroundWindow(), &ForegroundWindowProcessID);
+	return GetCurrentProcessId() == ForegroundWindowProcessID;
+}
 
 bool DirectX::getWindowInformation() {
 	bool WindowFocus = false;
@@ -173,7 +180,7 @@ bool DirectX::DeleteWindow() {
 }
 
 LRESULT APIENTRY DirectX::WndProcFunc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
-	if (ShowMenu && ImGui_Initialised) {
+	if (Gui::isEnabled && ImGui_Initialised) {
 		ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam);
 		return true;
 	}
@@ -209,16 +216,18 @@ HRESULT APIENTRY DirectX::MJPresent(IDXGISwapChain* pSwapChain, UINT SyncInterva
 			ImGui_Initialised = true;
 		}
 	}
-	// Menu State
-	if ((GetAsyncKeyState(VK_RSHIFT) & 1) || (GetAsyncKeyState(VK_ESCAPE) & 1 && ShowMenu)) {
-		if (!ShowMenu) {
+	
+	CheatManager::checkUserInput();
+
+	if ((GetAsyncKeyState(VK_RSHIFT) & 1) || (GetAsyncKeyState(VK_ESCAPE) & 1 && Gui::isEnabled)) {
+		if (!Gui::isEnabled) {
 			//drawHelper::lastState = functions.get_lockState();
 			//functions.set_lockState(None);
 		}
 		else {
 			//functions.set_lockState(drawHelper::lastState);
 		}
-		ShowMenu = !ShowMenu;
+		Gui::isEnabled = !Gui::isEnabled;
 	}
 
 	if (GetAsyncKeyState(VK_NUMPAD0) & 1) { 
@@ -229,10 +238,9 @@ HRESULT APIENTRY DirectX::MJPresent(IDXGISwapChain* pSwapChain, UINT SyncInterva
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
-	ImGui::GetIO().MouseDrawCursor = ShowMenu;
-	if (ShowMenu == true) {
-		Gui::drawGui();
-	}
+	ImGui::GetIO().MouseDrawCursor = Gui::isEnabled;
+	if (Gui::isEnabled == true) Gui::drawGui();
+	CheatManager::onRenderUpdate();
 	ImGui::EndFrame();
 	ImGui::Render();
 	DeviceContext->OMSetRenderTargets(1, &RenderTargetView, NULL);

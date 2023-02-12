@@ -1,31 +1,23 @@
 #include "Cheat.h"
 
 void Cheat::checkForKey() {
-	for (int key: keys) {
+	for (int key : keys) {
 		if (GetAsyncKeyState(key) & 1) {
-			isEnabled = !isEnabled;
 			isToggled = !isToggled;
-
-			if (isEnabled) {
-				onEnable();
-			} else {
-				onDisable();
-			}
-		}
-
-		if (isEnabled) {
-			onUpdate();
 		}
 	}
 }
 
 void Cheat::checkForToggle() {
-	if (isToggled && !isEnabled) {
+	if (isEnabled == isToggled) { return; }
+
+	isEnabled = isToggled;
+
+	if (isEnabled) {
 		onEnable();
-		isEnabled = true;
-	} else if (!isToggled && isEnabled) {
+	}
+	else if (!isEnabled) {
 		onDisable();
-		isEnabled = false;
 	}
 }
 
