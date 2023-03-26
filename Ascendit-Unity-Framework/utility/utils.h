@@ -8,6 +8,7 @@ typedef const char* cstring;
 namespace utils {
 
 	void waitBaseModuleLoaded();
+	void createDebugConsole();
 
 	inline uint64_t* MethodsTable;
 	bool CreateHook(uint16_t Index, void** Original, void* Function);

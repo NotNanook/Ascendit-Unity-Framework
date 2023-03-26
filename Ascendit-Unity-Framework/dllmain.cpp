@@ -1,19 +1,23 @@
 #include "CheatManager.h"
 #include "DirectX.h"
 #include "MinHook.h"
-#include "Il2Cpp.h"
+#include "Functions.h"
 #include "utils.h"
 
 DWORD WINAPI MainThread(LPVOID lpParameter) {
-    utils::waitBaseModuleLoaded();
 
-    IL2CPP::Initialize();
+    utils::waitBaseModuleLoaded();
 
     MH_Initialize();
     CheatManager::init();
-
+    Functions::init();
+    
     DirectX::getWindowInformation();
     DirectX::hookDirectX();
+
+#if defined _DEBUG
+    utils::createDebugConsole();
+#endif
 
     return 0;
 }

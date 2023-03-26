@@ -1,6 +1,7 @@
 #include "CheatManager.h"
 #include "DirectX.h"
 #include "Gui.h"
+#include "Functions.h"
 #include <Psapi.h>
 
 bool DirectX::isWindowFocused() {
@@ -221,11 +222,11 @@ HRESULT APIENTRY DirectX::MJPresent(IDXGISwapChain* pSwapChain, UINT SyncInterva
 
 	if ((GetAsyncKeyState(VK_RSHIFT) & 1) || (GetAsyncKeyState(VK_ESCAPE) & 1 && Gui::isEnabled)) {
 		if (!Gui::isEnabled) {
-			//drawHelper::lastState = functions.get_lockState();
-			//functions.set_lockState(None);
+			lastCursorState = Functions::getLockState();
+			Functions::setLockState(None);
 		}
 		else {
-			//functions.set_lockState(drawHelper::lastState);
+			Functions::setLockState(lastCursorState);
 		}
 		Gui::isEnabled = !Gui::isEnabled;
 	}

@@ -9,6 +9,12 @@ void utils::waitBaseModuleLoaded() {
 	}
 }
 
+void utils::createDebugConsole() {
+	AllocConsole();
+	FILE* f;
+	freopen_s(&f, "CONOUT$", "w", stdout);
+}
+
 bool utils::CreateHook(uint16_t Index, void** Original, void* Function) {
 	assert(Index >= 0 && Original != NULL && Function != NULL);
 	void* target = (void*)MethodsTable[Index];

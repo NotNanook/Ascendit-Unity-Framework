@@ -3,6 +3,7 @@
 #include <d3d11.h>
 
 #include "utils.h"
+#include "Structures.h"
 
 #include "ImGui/imgui_impl_dx11.h"
 #include "ImGui/imgui_impl_win32.h"
@@ -29,6 +30,7 @@ public:
 	inline static HWND WindowHwnd;
 
 	inline static bool ImGui_Initialised = false;
+	inline static CursorLockMode lastCursorState = None;
 
 	inline static DWORD ID;
 	inline static HANDLE Handle;
