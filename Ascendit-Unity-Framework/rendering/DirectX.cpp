@@ -4,6 +4,14 @@
 #include "Functions.h"
 #include <Psapi.h>
 
+void DirectX::DisableHooks() {
+	utils::RemoveAllHooks();
+	utils::DestroyImGui();
+	if (RenderTargetView) { RenderTargetView->Release(); RenderTargetView = NULL; }
+	if (DeviceContext) { DeviceContext->Release(); DeviceContext = NULL; }
+	if (Device) { Device->Release(); Device = NULL; }
+}
+
 bool DirectX::isWindowFocused() {
 	DWORD ForegroundWindowProcessID;
 	GetWindowThreadProcessId(GetForegroundWindow(), &ForegroundWindowProcessID);
@@ -232,8 +240,7 @@ HRESULT APIENTRY DirectX::MJPresent(IDXGISwapChain* pSwapChain, UINT SyncInterva
 	}
 
 	if (GetAsyncKeyState(VK_NUMPAD0) & 1) { 
-		utils::RemoveAllHooks();
-		return oIDXGISwapChainPresent(pSwapChain, SyncInterval, Flags);
+		CreateThread(0, 0, utils::EjectThread, 0, 0, 0);
 	}
 
 	ImGui_ImplDX11_NewFrame();

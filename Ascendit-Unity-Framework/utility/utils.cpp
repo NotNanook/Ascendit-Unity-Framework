@@ -2,6 +2,7 @@
 #include "MinHook/Include/MinHook.h"
 #include <ImGui/imgui_impl_dx11.h>
 #include <ImGui/imgui_impl_win32.h>
+#include "DirectX.h"
 
 void utils::waitBaseModuleLoaded() {
 	while (!GetModuleHandleA("GameAssembly.dll")) {
@@ -13,6 +14,12 @@ void utils::createDebugConsole() {
 	AllocConsole();
 	FILE* f;
 	freopen_s(&f, "CONOUT$", "w", stdout);
+	consoleFile = f;
+}
+
+void utils::closeDebugConsole() {
+	fclose(consoleFile);
+	FreeConsole();
 }
 
 bool utils::CreateHook(uint16_t Index, void** Original, void* Function) {
@@ -41,4 +48,24 @@ void utils::DestroyImGui() {
 	ImGui_ImplDX11_Shutdown();
 	ImGui_ImplWin32_Shutdown();
 	ImGui::DestroyContext();
+}
+
+DWORD __stdcall utils::EjectThread(LPVOID lpParameter) {
+	DirectX::DisableHooks();
+#if defined _DEBUG
+	closeDebugConsole();
+#endif
+	FreeLibraryAndExitThread(hModule, 0);
+}
+
+uintptr_t utils::FindDMAAddy(uintptr_t ptr, std::vector<unsigned int> offsets) {
+	uintptr_t addr = ptr;
+	if (addr == 0) { return NULL; }
+
+	for (unsigned int i = 0; i < offsets.size(); ++i) {
+		addr = *(uintptr_t*)addr;
+		if (addr == 0) { return NULL; }
+		addr += offsets[i];
+	}
+	return addr;
 }
